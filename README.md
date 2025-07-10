@@ -9,15 +9,34 @@ I heavily recommend this solution for those interested, and feel free to tweak o
 
 ## Examples
 
+### Colour vs grayscale
+
 | Colour graph                                    | Grayscale graph                                              |
 | ----------------------------------------------- | ------------------------------------------------------------ |
 | ![colour lineplot](results/line_test.png)       | ![grayscale lineplot](results/line_test_grayscale.png)       |
 | ![colour histogram](results/histogram_test.png) | ![grayscale histogram](results/histogram_test_grayscale.png) |
 | ![colour barplot](results/barplot_test.png)     | ![grayscale barplot](results/barplot_test_grayscale.png)     |
 
+### Compared to default
 
-| Matplotlib default                                    | Plotcolours                                             |
-| ----------------------------------------------- | ------------------------------------------------------------ |
-| ![spectrum default](results/spectrum_default.png)       | ![spectrum grayscale default](results/spectrum_default_grayscale.png)       |
+| Matplotlib default                                        | Plotcolours                                                                   |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| ![spectrum default](results/spectrum_default.png)         | ![spectrum grayscale default](results/spectrum_default_grayscale.png)         |
 | ![spectrum plotcolours](results/spectrum_plotcolours.png) | ![spectrum grayscale plotcolours](results/spectrum_plotcolours_grayscale.png) |
 
+
+### Colourblindness
+
+Via: [https://www.color-blindness.com/coblis-color-blindness-simulator/](https://www.color-blindness.com/coblis-color-blindness-simulator/)
+
+| Colourblindness name                  | Graph                                                                     |
+| ------------------------------------- | ------------------------------------------------------------------------- |
+| Default (no colourblindness)          | ![default](results/barplot_test.png)                                      |
+| Protanomaly (red-weak)                | ![protanomaly](results/colourblind/protanomaly.png)                       |
+| Deuteranomaly (green-weak)            | ![deuteranomaly](results/colourblind/deuteranomaly.png)                   |
+| Tritanomaly (blue-weak)               | ![tritanomaly](results/colourblind/tritanomaly.png)                       |
+| Protanopia (red-blind)                | ![protanopia](results/colourblind/protanopia.png)                         |
+| Deuteranopia (green-blind)            | ![deuteranopia](results/colourblind/deuteranopia.png)                     |
+| Tritanopia (blue-blind)               | ![tritanopia](results/colourblind/tritanopia.png)                         |
+| Achromatopsia (total color blindness) | ![achromatopsia](results/colourblind/achromatopsia.png)                   |
+| Blue Cone Monochromacy                | ![blue cone monochromacy](results/colourblind/blue_cone_monochromacy.png) |
