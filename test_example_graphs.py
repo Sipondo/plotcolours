@@ -1,10 +1,7 @@
 import numpy as np
-from cycler import cycler
-import matplotlib as mpl
-
 import matplotlib.pyplot as plt
-
 import plotcolours
+
 from PIL import Image
 
 STYLES_TO_TEST = 12

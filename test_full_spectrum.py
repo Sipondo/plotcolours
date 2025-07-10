@@ -2,9 +2,9 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-from PIL import Image
 
-from matplotlib.colors import TABLEAU_COLORS, same_color
+from PIL import Image
+from matplotlib.colors import same_color
 
 
 def show_cycle(name='default'):
