@@ -19,11 +19,10 @@ I heavily recommend this solution for those interested, and feel free to tweak o
 
 ### Compared to default
 
-| Matplotlib default                                        | Plotcolours                                                                   |
-| --------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| ![spectrum default](results/spectrum_default.png)         | ![spectrum grayscale default](results/spectrum_default_grayscale.png)         |
-| ![spectrum plotcolours](results/spectrum_plotcolours.png) | ![spectrum grayscale plotcolours](results/spectrum_plotcolours_grayscale.png) |
-
+| Matplotlib default                                                    | Plotcolours                                                                   |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| ![spectrum default](results/spectrum_default.png)                     | ![spectrum plotcolours](results/spectrum_plotcolours.png)                     |
+| ![spectrum grayscale default](results/spectrum_default_grayscale.png) | ![spectrum grayscale plotcolours](results/spectrum_plotcolours_grayscale.png) |
 
 ### Colourblindness
 
