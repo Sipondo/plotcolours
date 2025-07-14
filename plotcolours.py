@@ -9,7 +9,7 @@ order = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 # Distinguishable colours (hex codes) - 12 colours
 # Ordered for maximum distinguishability, especially in greyscale
-dist_colours = [
+colours = [
     "#0070DE",  # Blue (dark)
     "#ABD473",  # Green (medium)
     "#9482C9",  # Violet (medium)
@@ -24,10 +24,10 @@ dist_colours = [
     "#FFD100",  # Yellow (very light)
 ]
 # Define distinguishable marker patterns and linestyles
-dist_markers = ["o", "s", "D", "^", "v", ">", "<", "P", "X", "*", "h", "+"]
+markers = ["o", "s", "D", "^", "v", ">", "<", "P", "X", "*", "h", "+"]
 
 # Define distinguishable hatching patterns for histograms
-dist_hatches = [
+hatches = [
     "/",  # 1
     "\\",  # 2
     "|",  # 3
@@ -43,7 +43,7 @@ dist_hatches = [
 ]
 
 # Linestyles for better greyscale distinction
-dist_linestyles = [
+linestyles = [
     "-",  # 1
     "--",  # 2
     "-.",  # 3
@@ -58,17 +58,17 @@ dist_linestyles = [
     (0, (1, 1, 10, 1)),  # 12
 ]
 
-dist_colours = [dist_colours[i] for i in order]
-dist_markers = [dist_markers[i] for i in order]
-dist_hatches = [dist_hatches[i] for i in order]
-dist_linestyles = [dist_linestyles[i] for i in order]
+colours = [colours[i] for i in order]
+markers = [markers[i] for i in order]
+hatches = [hatches[i] for i in order]
+linestyles = [linestyles[i] for i in order]
 
 # Set global rcParams for matplotlib to use the custom styles by default
 
 mpl.rcParams["axes.prop_cycle"] = (
-    cycler("color", dist_colours)
-    + cycler("marker", dist_markers)
-    + cycler("linestyle", dist_linestyles)
+    cycler("color", colours)
+    + cycler("marker", markers)
+    + cycler("linestyle", linestyles)
 )
 mpl.rcParams["lines.marker"] = "o"  # Default marker (will be cycled)
 mpl.rcParams["lines.linestyle"] = "-"  # Default linestyle (will be cycled)
@@ -84,7 +84,7 @@ def hatched_bar(*args, **kwargs):
     bars = _original_bar(*args, **kwargs)
     # Apply hatches in a cycle
     for i, bar in enumerate(bars):
-        hatch = dist_hatches[i % len(dist_hatches)]
+        hatch = hatches[i % len(hatches)]
         bar.set_hatch(hatch)
     return bars
 
@@ -98,8 +98,8 @@ _hist_hatch_offset = 0
 
 def hatched_hist(*args, **kwargs):
     global _hist_hatch_offset
-    kwargs["hatch"] = dist_hatches[_hist_hatch_offset]
-    _hist_hatch_offset = (_hist_hatch_offset + 1) % len(dist_hatches)
+    kwargs["hatch"] = hatches[_hist_hatch_offset]
+    _hist_hatch_offset = (_hist_hatch_offset + 1) % len(hatches)
     n, bins, patches = _original_hist(*args, **kwargs)
     return n, bins, patches
 
